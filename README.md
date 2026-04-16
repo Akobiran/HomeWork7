@@ -69,11 +69,10 @@ By default, the application runs at: http ://localhost:8080
 - 404 Not Found if task does not exist
   ## Create a task
   Request
-  POST /api/tasks
-  Content-Type: application/json
-  Example body:
-  
-{
+  - POST: /api/tasks
+  - Content-Type: application/json
+  - Example body:
+```{
   "title": "Complete Homework 5",
   "description": "Finish Spring Boot API assignment",
   "completed": false,
@@ -83,8 +82,7 @@ By default, the application runs at: http ://localhost:8080
  ## Response
 - 201 Created
 - Example response:
-  ```
-{
+```{
   "id": 1,
   "title": "Complete Homework 5",
   "description": "Finish Spring Boot API assignment",
@@ -97,15 +95,46 @@ Request
 PUT /api/tasks/{id}
 Content-Type: application/json
 Example:
-{
+```{
   "title": "Complete Homework 5",
   "description": "Updated task description",
   "completed": true,
   "priority": "MEDIUM"
 }
-Responses
+```
+- Responses:
 200 OK if updated successfully
 404 Not Found if task does not exist
+## Delete a task
+ Request: DELETE /api/tasks/{id}
+- Responses: 
+- 204 No Content if the task was deleted
+- 404 Not Found if the task does not exist
+## Testing with Postman
+- You can test the API using Postman.
+- Example POST Request
+- Method: POST
+- URL: http://localhost:8080/api/tasks
+- Header: Content-Type: application/json
+- Body:
+```{
+  "title": "Study for exam",
+  "description": "Review calculus notes",
+  "completed": false,
+  "priority": "HIGH"
+}
+```
+## Learning Goals
+- This project demonstrates:
+- building a REST API with Spring Boot
+- using HTTP methods such as GET, POST, PUT, and DELETE
+- converting JSON into Java objects
+- organizing code into model, service, and controller layers
+- validating user input
+- testing endpoints with Postman
+
+
+  
 
   
   
