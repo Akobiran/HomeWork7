@@ -21,3 +21,40 @@ A simple Spring Boot REST API for managing tasks. This project allows users to c
 - Lombok
 - Jakarta Validation
 - Postman for API testing
+## How the Project Works
+- This project follows a simple layered structure:
+- Task: the model class that represents task data
+- TaskService: contains the business logic for storing and managing tasks
+- TaskController: handles HTTP requests and sends HTTP responses
+- When a client sends a request, the controller receives it, calls the service, and returns the result as JSON.
+## Task Fields
+- Each task contains:
+- id – unique task ID
+- title – required, 3 to 100 characters
+- description – optional, maximum 500 characters
+- completed – task status (true or false)
+- priority – task priority (LOW, MEDIUM, or HIGH)
+## Validation Rules
+- The API validates incoming task data:
+- title cannot be blank
+- title must be between 3 and 100 characters
+- description cannot exceed 500 characters
+- If validation fails, the API returns:
+- 400 Bad Request
+- with a JSON response describing the error.
+## Server URL
+By default, the application runs at: http ://localhost:8080
+## API ENDPOINTS 
+- Get all tasks 
+- Request: GET api/tasks
+- Response: 200 OK
+  Example :
+  ```
+  {
+    "id": 1,
+    "title": "Complete Homework 5",
+    "description": "Finish Spring Boot API assignment",
+    "completed": false,
+    "priority": "HIGH"
+  }
+
