@@ -45,7 +45,7 @@ A simple Spring Boot REST API for managing tasks. This project allows users to c
 ## Server URL
 By default, the application runs at: http ://localhost:8080
 ## API ENDPOINTS 
-- Get all tasks 
+## Get all tasks 
 - Request: GET api/tasks
 - Response: 200 OK
   Example :
@@ -57,4 +57,56 @@ By default, the application runs at: http ://localhost:8080
     "completed": false,
     "priority": "HIGH"
   }
+  ```
+  ## GET TASK BY ID :
+  - Request : GET api/task/{id}
+   Example: GET api/task/1
+    Responses
+  - 200 OK if task exists
+  - 404 Not Found if task does not exist
+ Responses
+- 200 OK if task exists
+- 404 Not Found if task does not exist
+  ## Create a task
+  Request
+  POST /api/tasks
+  Content-Type: application/json
+  Example body:
+  
+{
+  "title": "Complete Homework 5",
+  "description": "Finish Spring Boot API assignment",
+  "completed": false,
+  "priority": "HIGH"
+}
+```
+ ## Response
+- 201 Created
+- Example response:
+  ```
+{
+  "id": 1,
+  "title": "Complete Homework 5",
+  "description": "Finish Spring Boot API assignment",
+  "completed": false,
+  "priority": "HIGH"
+}
+```
+## Update a task
+Request
+PUT /api/tasks/{id}
+Content-Type: application/json
+Example:
+{
+  "title": "Complete Homework 5",
+  "description": "Updated task description",
+  "completed": true,
+  "priority": "MEDIUM"
+}
+Responses
+200 OK if updated successfully
+404 Not Found if task does not exist
+
+  
+  
 
