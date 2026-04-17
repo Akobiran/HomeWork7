@@ -133,7 +133,8 @@ Example:
 - validating user input
 - testing endpoints with Postman
 
-
+## Video Link 
+- https://youtu.be/9-z-R47s-cY?si=4wX1NoY0k4_8CKLN
   
 
   
