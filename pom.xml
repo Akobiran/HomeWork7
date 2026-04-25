@@ -9,7 +9,7 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>edu.brooklyn.cisc3130</groupId>
-	<artifactId>campus-taskboard</artifactId>
+	<artifactId>HomeWork6</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name/>
 	<description/>
