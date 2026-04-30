@@ -99,6 +99,7 @@ cd campus-taskboard
 - Pagination & Sorting – efficient data handling
 - Lombok – reduces boilerplate code
 
-  
+  ## Video Link
+  - https://youtu.be/XXY0NwF-d0E?si=zZaHHtlY5lzS7iwn
   
 
