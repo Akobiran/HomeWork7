@@ -38,4 +38,14 @@ public interface TaskRepository extends JpaRepository<Task, Integer> {
 
     // Count tasks by priority
     long countByPriority(Task.Priority priority);
+
+    // Find only non-deleted tasks
+    List<Task> findByDeletedFalse();
+
+    // Find only deleted tasks
+    List<Task> findByDeletedTrue();
+
+    // Override findAll to exclude deleted
+    @Query("SELECT t FROM Task t WHERE t.deleted = false")
+    List<Task> findAllActive();
 }

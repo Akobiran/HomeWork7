@@ -20,17 +20,17 @@ public class DataInitializer implements CommandLineRunner {
             taskRepository.save(new Task(
                     null, "Complete Homework 6",
                     "Finish Spring Data JPA assignment",
-                    false, Task.Priority.HIGH, null, null));
+                    false, Task.Priority.HIGH, null, null,false));
 
             taskRepository.save(new Task(
                     null, "Study for Midterm",
                     "Review chapters 1-5",
-                    false, Task.Priority.HIGH, null, null));
+                    false, Task.Priority.HIGH, null, null,false));
 
             taskRepository.save(new Task(
                     null, "Buy groceries",
                     "Milk, eggs, bread",
-                    true, Task.Priority.LOW, null, null));
+                    true, Task.Priority.LOW, null, null,false));
         }
     }
 }
