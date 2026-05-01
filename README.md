@@ -6,7 +6,7 @@ This project demonstrates backend development concepts such as REST APIs, databa
 
 ---
 
-## 🚀 Features
+##  Features
 
 - Create, Read, Update, Delete (CRUD) tasks
 - Task status management: completed / incomplete
@@ -24,7 +24,7 @@ This project demonstrates backend development concepts such as REST APIs, databa
 
 ---
 
-## 🏗️ Architecture
+##  Architecture
 
 The project follows Layered Architecture, also known as Separation of Concerns.
 
@@ -48,7 +48,7 @@ Controller → Service → Repository → Database
 
 ---
 
-## 🗄️ Database
+##  Database
 
 The project uses an H2 in-memory database.
 
@@ -79,7 +79,7 @@ The project uses an H2 in-memory database.
 
 ---
 
-## 📦 DTO Classes
+##  DTO Classes
 
 The project uses DTOs to separate API input/output from the database entity.
 
@@ -120,7 +120,7 @@ Used for structured error messages. It returns:
 
 ---
 
-## ⚙️ How to Run
+##  How to Run
 
 ### 1. Clone Repository
 
@@ -143,9 +143,9 @@ http://localhost:8080
 
 ---
 
-## 📡 API Endpoints
+##  API Endpoints
 
-### 🔹 Basic CRUD
+###  Basic CRUD
 
 | Method | Endpoint          | Description     |
 | ------ | ----------------- | --------------- |
@@ -155,7 +155,7 @@ http://localhost:8080
 | PUT    | `/api/tasks/{id}` | Update task     |
 | DELETE | `/api/tasks/{id}` | Delete task     |
 
-### 🔹 Filtering
+###  Filtering
 
 | Method | Endpoint                         | Description          |
 | ------ | -------------------------------- | -------------------- |
@@ -163,7 +163,7 @@ http://localhost:8080
 | GET    | `/api/tasks/incomplete`          | Get incomplete tasks |
 | GET    | `/api/tasks/priority/{priority}` | Filter by priority   |
 
-### 🔹 Search
+###  Search
 
 ```http
 GET /api/tasks/search?keyword=homework
@@ -171,7 +171,7 @@ GET /api/tasks/search?keyword=homework
 
 This endpoint searches tasks by matching the keyword against the task title or description.
 
-### 🔹 Pagination
+###  Pagination
 
 ```http
 GET /api/tasks/paginated?page=0&size=10&sortBy=id
@@ -187,7 +187,7 @@ Query parameters:
 
 ---
 
-## 📥 Example Request: Create Task
+##  Example Request: Create Task
 
 ```http
 POST /api/tasks
@@ -219,7 +219,7 @@ Content-Type: application/json
 
 ---
 
-## ✅ Validation
+##  Validation
 
 The API validates incoming task data before saving it.
 
@@ -260,7 +260,7 @@ If the request body is invalid, the API returns a `400 Bad Request` response wit
 
 ---
 
-## ⚠️ Exception Handling
+## Exception Handling
 
 The project includes a global exception handler using `@RestControllerAdvice`.
 
@@ -290,7 +290,7 @@ This keeps error handling separate from the controller and makes error responses
 
 ---
 
-## 🧾 Logging
+##  Logging
 
 The project includes a custom `LoggingFilter`.
 
@@ -311,7 +311,7 @@ This helps with debugging and monitoring API requests.
 
 ---
 
-## 🧠 Repository Methods
+##  Repository Methods
 
 The repository extends `JpaRepository<Task, Integer>`, so Spring Data JPA automatically provides CRUD methods such as:
 
@@ -343,7 +343,7 @@ List<Task> searchTasks(@Param("keyword") String keyword);
 
 ---
 
-## 🧠 Key Concepts Used
+##  Key Concepts Used
 
 - Spring Boot – application framework
 - REST API – HTTP communication
@@ -361,7 +361,7 @@ List<Task> searchTasks(@Param("keyword") String keyword);
 
 ---
 
-## 🎥 Video Link
+##  Video Link
 
 - https://youtu.be/XXY0NwF-d0E?si=zZaHHtlY5lzS7iwn
 
